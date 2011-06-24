@@ -16,6 +16,7 @@ function _rails_command () {
   fi
 }
 
+alias r='rails'
 alias rc='_rails_command console'
 alias rd='_rails_command destroy'
 alias rdb='_rails_command dbconsole'
