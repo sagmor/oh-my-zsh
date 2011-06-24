@@ -3,6 +3,8 @@ alias g='git'
 compdef g=git
 alias gst='git status'
 compdef _git gst=git-status
+alias gs='git status'
+compdef _git gs=git-status
 alias gl='git pull'
 compdef _git gl=git-pull
 alias gup='git fetch && git rebase'
@@ -27,6 +29,8 @@ alias gcp='git cherry-pick'
 compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=5'
 compdef _git glg=git-log
+
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
